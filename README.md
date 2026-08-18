@@ -1,6 +1,6 @@
 # Sisi
 
-Sisi es una aplicación web progresiva para estudiar vocabulario punjabi de satsangs en Devanagari, con transliteración y traducción al español.
+Sisi es una aplicación web progresiva para estudiar vocabulario punjabi en Devanagari, con transliteración y traducción al español.
 
 ## Contenido
 
