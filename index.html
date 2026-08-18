@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#175c4b">
+  <meta name="description" content="Entrenador de vocabulario punjabi para comprender satsangs.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Sisi">
+  <title>Sisi</title>
+  <link rel="icon" type="image/svg+xml" href="sisi-icon.svg">
+  <link rel="apple-touch-icon" href="sisi-icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-shell" class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <button class="brand" type="button" data-route="learn" aria-label="Sisi, inicio">
+        <span class="brand-mark" aria-hidden="true">स</span>
+        <span class="brand-copy">
+          <strong>Sisi</strong>
+          <small>Punjabi</small>
+        </span>
+      </button>
+
+      <nav class="main-nav">
+        <button class="nav-button active" type="button" data-route="learn">
+          <span class="ui-icon" aria-hidden="true">⌂</span>
+          <span>Aprender</span>
+        </button>
+        <button class="nav-button" type="button" data-route="review">
+          <span class="ui-icon" aria-hidden="true">◎</span>
+          <span>Repasar</span>
+          <span id="review-badge" class="nav-badge" hidden>0</span>
+        </button>
+        <button class="nav-button" type="button" data-route="dictionary">
+          <span class="ui-icon" aria-hidden="true">⌕</span>
+          <span>Diccionario</span>
+        </button>
+        <button class="nav-button" type="button" data-route="progress">
+          <span class="ui-icon" aria-hidden="true">▥</span>
+          <span>Progreso</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="sidebar-stat">
+          <span>Meta diaria</span>
+          <strong id="sidebar-goal">0 / 20 XP</strong>
+          <span class="mini-progress"><span id="sidebar-goal-bar"></span></span>
+        </div>
+        <button class="icon-button" id="settings-button" type="button" aria-label="Abrir ajustes" title="Ajustes">
+          <span aria-hidden="true">⚙</span>
+        </button>
+      </div>
+    </aside>
+
+    <header class="mobile-header">
+      <button class="brand compact" type="button" data-route="learn" aria-label="Sisi, inicio">
+        <span class="brand-mark" aria-hidden="true">स</span>
+        <span class="brand-copy"><strong>Sisi</strong></span>
+      </button>
+      <div class="mobile-stats" aria-label="Resumen diario">
+        <span><b id="mobile-streak">0</b> días</span>
+        <span><b id="mobile-xp">0</b> XP</span>
+      </div>
+    </header>
+
+    <main id="main-content" class="main-content" tabindex="-1"></main>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <button class="active" type="button" data-route="learn" aria-label="Aprender"><span aria-hidden="true">⌂</span></button>
+      <button type="button" data-route="review" aria-label="Repasar"><span aria-hidden="true">◎</span></button>
+      <button type="button" data-route="dictionary" aria-label="Diccionario"><span aria-hidden="true">⌕</span></button>
+      <button type="button" data-route="progress" aria-label="Progreso"><span aria-hidden="true">▥</span></button>
+      <button type="button" id="mobile-settings-button" aria-label="Ajustes"><span aria-hidden="true">⚙</span></button>
+    </nav>
+  </div>
+
+  <div id="lesson-overlay" class="lesson-overlay" hidden></div>
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
