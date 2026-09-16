@@ -1,4 +1,4 @@
-const CACHE_NAME = "sisi-static-2026-08-18-2";
+const CACHE_NAME = "sisi-static-2026-09-16-translations-1";
 const OFFLINE_PAGE = "./index.html";
 const APP_SHELL = [
   "./",
